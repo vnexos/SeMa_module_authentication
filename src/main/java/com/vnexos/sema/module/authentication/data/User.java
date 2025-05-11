@@ -5,10 +5,11 @@ import java.util.UUID;
 
 import com.vnexos.sema.database.annotations.Column;
 import com.vnexos.sema.database.annotations.Entity;
+import com.vnexos.sema.database.helpers.DefaultEntity;
 import com.vnexos.sema.loader.annotations.Hidden;
 
 @Entity(tableName = "Users")
-public class User {
+public class User extends DefaultEntity {
   @Column(nullable = false)
   private String fullname;
   @Column(nullable = false)
@@ -26,6 +27,8 @@ public class User {
   @Column(nullable = false)
   private boolean emailConfirmed;
 
+  @Column
+  private String address;
   @Column
   private String avatarUrl;
   @Column
