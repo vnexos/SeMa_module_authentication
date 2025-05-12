@@ -6,5 +6,7 @@ import com.vnexos.sema.database.helpers.DatabaseContext;
 import com.vnexos.sema.module.authentication.data.User;
 
 public interface IUserRepository extends DatabaseContext<User, UUID> {
-  public User get(String username);
+  public User getByUsername(String username);
+
+  public User getByEmail(String email);
 }
