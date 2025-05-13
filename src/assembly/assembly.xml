@@ -1,0 +1,18 @@
+<assembly>
+  <id>libs</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+
+  <dependencySets>
+    <dependencySet>
+      <useTransitiveFiltering>true</useTransitiveFiltering>
+      <useProjectArtifact>false</useProjectArtifact>
+      <unpack>false</unpack>
+
+      <excludes>
+        <exclude>com.vnexos.sema:core</exclude>
+      </excludes>
+    </dependencySet>
+  </dependencySets>
+</assembly>

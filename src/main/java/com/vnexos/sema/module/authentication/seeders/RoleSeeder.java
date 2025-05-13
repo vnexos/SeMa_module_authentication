@@ -13,7 +13,7 @@ public class RoleSeeder {
 
   private static Role[] roles = {
       new Role("3a0ee0a6-a094-4617-8d8d-d5f96d3b6466", "SYSTEM_ROLE_ADMIN"),
-      new Role("6ef803a7-0a0e-4270-b3e7-4bc27c3c1a5f", "SYSTEM_ROLE_GOVERMENT"),
+      new Role("6ef803a7-0a0e-4270-b3e7-4bc27c3c1a5f", "SYSTEM_ROLE_GOVERNMENT"),
       new Role("0b70667c-95e4-40d0-b817-676d49a033e5", "SYSTEM_ROLE_USER")
   };
 
