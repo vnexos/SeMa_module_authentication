@@ -20,13 +20,15 @@ public class User extends DefaultEntity {
 
   @Column(nullable = false)
   private String phoneNumber;
-  @Column(nullable = false)
+  @Column(defaultValue = "0")
   private boolean phoneNumberConfirmed;
   @Column(nullable = false)
   private String email;
-  @Column(nullable = false)
+  @Column(defaultValue = "0")
   private boolean emailConfirmed;
 
+  @Column(nullable = false, length = 2)
+  private String countryCode;
   @Column
   private String address;
   @Column
@@ -53,4 +55,16 @@ public class User extends DefaultEntity {
   @Column
   @Hidden
   private String refreshToken;
+
+  public void setHashedPassword(String hashedPassword) {
+    this.hashedPassword = hashedPassword;
+  }
+
+  public String getHashedPassword() {
+    return hashedPassword;
+  }
+
+  public void setRoleId(String roleId) {
+    this.roleId = UUID.fromString(roleId);
+  }
 }
