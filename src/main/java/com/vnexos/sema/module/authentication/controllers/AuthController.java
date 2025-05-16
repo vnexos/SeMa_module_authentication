@@ -4,6 +4,8 @@ import com.vnexos.sema.ApiResponse;
 import com.vnexos.sema.loader.annotations.AutoWired;
 import com.vnexos.sema.loader.annotations.Controller;
 import com.vnexos.sema.loader.annotations.FromBody;
+import com.vnexos.sema.loader.annotations.FromQuery;
+import com.vnexos.sema.loader.annotations.HttpGet;
 import com.vnexos.sema.loader.annotations.HttpPost;
 import com.vnexos.sema.loader.interfaces.ControllerBase;
 import com.vnexos.sema.module.authentication.AuthenticationModuleMain;
@@ -37,8 +39,8 @@ public class AuthController extends ControllerBase {
     }
   }
 
-  @HttpPost("sign-in")
-  public ApiResponse<?> login(@FromBody LoginDto request) {
+  @HttpGet("sign-in")
+  public ApiResponse<?> login(@FromQuery LoginDto request) {
     try {
       User user = userRepository.getByEmail(request.getAccount());
       if (user == null)
